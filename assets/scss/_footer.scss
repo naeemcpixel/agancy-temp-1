@@ -1,0 +1,81 @@
+// ====================== Footoer =======================
+footer{
+   
+    color: rgba($white-color, .80);
+    .footer-top{
+        padding: 100px 0px;
+    }
+    .form-control{
+        background-color: transparent;
+        border-radius: $border-radius;
+        border-color: $primary-color;
+        height: 45px; 
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+       
+    }
+    h5{
+        font-size: 22px;
+    }
+    p{
+        color: currentColor;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    form{
+        .btn{
+            background-color: $primary-color;
+            color: #fff;
+            border-radius: $border-radius;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+            padding-left: 15px;
+            padding-right: 15px;
+            transition: all .3s;
+            &:hover{
+                color: $secondary-color;
+            }
+        }
+    }
+    .copyright-text{
+        text-align: center;
+        p{
+            margin: 0;
+        }
+    }
+    .copyright-wrapper{
+        background-color: #121212;
+        padding: 30px 0px;
+    }
+}
+.footer-logo{
+    max-width: 300px;
+}
+
+.footer-bg{
+    background-color: #191919;
+}
+// ====================== Footer Menu ===================
+ul.footer-menu{
+    li{
+        list-style: none;
+        margin-bottom: 15px;
+        a{
+            color: currentColor;
+            transition: all .3s;
+            &:hover{
+                color: $primary-color;
+            }
+        }
+    }
+    li.active{
+        a{
+            color: $primary-color;
+        }
+    }
+    span{
+        i{
+            margin-right: 10px;
+        }
+    }
+}

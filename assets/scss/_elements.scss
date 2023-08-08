@@ -1,0 +1,1848 @@
+// ====================== Buttons Style =======================
+.primary-btn{
+    @include btn-style(
+        $primary-color,     // Background color
+        $white-color,       // Text color
+        $primary-color,     // Border color
+        $primary-color,       // Hover background-color
+        $white-color,       // Hover text color
+        $primary-color       // Hover border color
+        );
+        position: relative;
+        overflow: hidden;
+        &:after{
+            background: #fff;
+            content: "";
+            height: 155px;
+            left: -75px;
+            opacity: .2;
+            position: absolute;
+            top: -50px;
+            transform: rotate(35deg);
+            transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+            width: 50px;
+            z-index: 1;
+        }
+        &:hover{
+            &:after{
+                left: 120%;
+                transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+            }
+        }
+    }
+.secondary-btn{
+    @include btn-style(
+        $secondary-color,   // Background color
+        $white-color,       // Text color
+        $secondary-color,   // Border color
+        $black-color,       // Hover background color
+        $white-color,       // Hover text color
+        $black-color        // Hover border color
+        );
+    }
+.gray-btn{
+    @include btn-style(
+        $gray-color-2,      // Background color
+        $black-color,       // Text color
+        $gray-color-2,      // Border color
+        $black-color,       // Hover background color
+        $white-color,       // Hover text color
+        $black-color        // Hover border color
+        );
+    }
+.black-btn{
+    @include btn-style(
+        $black-color,       // Background color
+        $white-color,       // Text color
+        $black-color,       // Border color
+        $black-color,       // Hover background color
+        $white-color,       // Hover text color
+        $black-color        // Hover border color
+        );
+    }
+.primary-btn-outline{
+    @include btn-style(
+        $background-transparent,       // Background color
+        $primary-color,     // Text color
+        $primary-color,     // Border color
+        $primary-color,     // Hover background color
+        $white-color,       // Hover text color
+        $primary-color      // Hover border color
+        );    
+    }
+.secondary-btn-outline{
+    @include btn-style(
+        $white-color,       // Background color
+        $secondary-color,   // Text color
+        $secondary-color,   // Border color
+        $secondary-color,   // Hover background color
+        $white-color,       // Hover text color
+        $secondary-color    // Hover border color
+        );
+    }
+.white-btn-outline{
+    @include btn-style(
+        $background-transparent,  // Background color
+        $white-color,             // Text color
+        $white-color,             // Border-color
+        $black-color,             // Hover background color
+        $white-color,             // Hover-Text-color
+        $black-color              // Hover border color
+        );
+    }
+.black-btn-outline{
+    @include btn-style(
+        $white-color,       // Background color
+        $black-color,       // Text color
+        $black-color,       // Border color
+        $black-color,       // Hover background color
+        $white-color,       // Hover text color
+        $black-color        // Hover-border-color
+        );
+    }
+.btn-lg{
+    font-size: 18px;
+    padding: 15px 40px;
+}
+.read-more-btn{
+    color: $heading-color;
+    font-size: 16px;
+    transition: all .3s;
+    position: relative;
+    &::after{
+        font: var(--fa-font-solid);
+        color: $primary-color;
+        content: '\f178';
+        margin-left: 15px;
+        opacity: 0;
+        transition: all .3s;
+        font-size: 14px;
+        position: absolute;
+        top: 4px;
+    }
+    &:hover{
+       
+        &:after{
+            margin-left: 5px;
+            opacity: 1;
+        }
+    }
+}
+.btn-icon{
+    transition: all .3s;
+    position: relative;
+    
+    &::after{
+        font: var(--fa-font-solid);
+        color: $primary-color;
+        content: '\f178';
+        margin-left: 15px;
+        opacity: 0;
+        transition: all .3s;
+        position: absolute;
+        top: 15px;
+    }
+    &:hover{
+        padding-right: 60px;
+        &::after{
+            margin-left: 8px;
+            opacity: 1;
+            color: $white-color;
+        }
+    }
+}
+#scroll-up-btn{
+	display: inline-block;
+	background-color: $primary-color;
+	width: 45px;
+	height: 45px;
+	text-align: center;
+	border-radius: 50px;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	transition: background-color .3s, 
+	  opacity .5s, visibility .5s;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 1000;
+	&:after{
+		content: "\f106";
+		font-family: FontAwesome;
+		font-weight: normal;
+		font-style: normal;
+		font-size: 1.5em;
+		line-height: 45px;
+		color: #fff;
+	}
+	&:hover{
+		cursor: pointer;
+  		background-color: rgba($primary-color, .7);
+	}
+	&:active{
+		background-color: rgba($primary-color, .7);
+	}
+}
+#scroll-up-btn.show{
+	opacity: 1;
+  	visibility: visible;
+}
+.circle-1{
+    fill: #fff;
+    stroke: $primary-color;
+    stroke-width: 5px;
+    opacity: 0.65;
+}
+.ellipse-shape{
+    width: fit-content;
+    position: absolute;
+    top: 23%;
+    left: 53%;
+    z-index: -1;
+    pointer-events: none;
+}
+.polygon-shape{
+    width: fit-content;
+    position: absolute;
+    bottom: 8%;
+    right: 15%;
+    z-index: -1;
+    pointer-events: none;
+}
+.square-shape{
+    width: fit-content;
+    position: absolute;
+    bottom: 5%;
+    left: -1%;
+    pointer-events: none;
+}
+.curve-shape{
+    width: fit-content;
+    position: absolute;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+}
+// ====================== Form Elements Style ==================
+.form-control{
+    padding: 0.775rem 1rem;
+    background-color: #f1f1f1;
+    border-color: #f7f7f7;
+}
+.form-select{
+    padding: 0.775rem 2.25rem 0.775rem 1rem;
+    background-color: #f1f1f1;
+    border-color: #f7f7f7;
+}
+.map-wrapper{
+    width: 100%;
+    height: 500px;
+    iframe{
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+}
+// ====================== Social List Style ===================
+.social-list{
+    @include social-list(
+        16px,               // Icons size
+        $heading-color,     // Icons color
+        $primary-color,     // Icons hover color
+        5px                 // Icons space
+    );
+}
+.social-list.style-one{
+    @include social-list(
+        16px,               // Icons size
+        $heading-color,     // Icons color
+        $primary-color,     // Icons hover color
+        3px                 // Icons space
+    );
+    li{
+        a{
+            background-color: $primary-color;
+            width: 40px;
+            height: 40px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 18px;
+            &:hover{
+                background-color: $secondary-color;
+                color: #fff;
+            }
+        }
+    }
+    
+}
+.social-list.style-two{
+    @include social-list(
+        16px,               // Icons size
+        $heading-color,     // Icons color
+        $primary-color,     // Icons hover color
+        3px                 // Icons space
+    );
+    li{
+        a{
+            background-color: transparent;
+            border:1px solid $primary-color;
+            width: 40px;
+            height: 40px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $primary-color;
+            font-size: 16px;
+            &:hover{
+                background-color: $primary-color;
+                color: #fff;
+            }
+        }
+    }
+    
+}
+// ====================== List Style ==========================
+.list-style{
+    @include list-style(
+        16px,               // Font size
+        $paragraph-color,   // Text color
+        5px                 // Margin
+    );
+}
+.list-style-one{
+    @include list-style-one(
+        18px,               // Font size
+        $paragraph-color,   // Text color
+        10px                // Margin
+    );
+}
+.list-style-two{
+    @include list-style-two(
+        16px,               // Font size
+        $paragraph-color,   // Text color
+        12px                 // Margin
+    );
+}
+.list-style-three{
+    @include list-style-three(
+        16px,               // Font size
+        $paragraph-color,   // Text color
+        10px                 // Margin
+    );
+}
+.cnt-list{
+    li{
+        p{
+            font-size:18px;
+            line-height: 30px;
+            color: $paragraph-color;
+            margin: 0;
+        }
+        list-style: none;     
+        margin-bottom: 35px;
+        a{
+            color: inherit;
+            font-size: inherit;
+            display: inline-block;
+            &:hover{
+                color: $primary-color;
+            }
+        }
+        .icon{
+            display: inline-block;
+            width: 48px;
+            height: 48px;
+            border-radius: 50px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 48px;
+            background-color: rgba($primary-color, 0.2);
+            color: $primary-color;
+            margin-right: 10px;
+            float: left;
+        }
+    }
+}
+ul.post-meta{
+    li{
+        display: inline-block;
+        margin-right: 15px;
+        color: rgba($paragraph-color, .7);
+        i{
+            color: $primary-color;
+            margin-right: 5px;
+        }
+    }
+}
+// ====================== Tabs Style ===================
+ul.nav-pills{
+    border-bottom: 1px solid $border-color;
+    .nav-item{
+        .nav-link{
+            color: $heading-color;
+            border-radius: 0;
+            &.active{
+                background-color: transparent;
+                color: $secondary-color;
+                border-bottom: 1px solid $secondary-color;
+            }
+        }
+    }
+}
+// ==================== Off-Canvas Menu ======================
+.slidein-menu-toggle{
+	cursor:pointer;
+    font-size: 20px;
+	
+	&.top{
+		top: 8px;
+		left: 15px;
+		right:auto;
+	}
+    
+}
+.canvas-menu-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    content: "";
+    -webkit-transition: all 1500ms cubic-bezier(0.645, 0.045, 0.095, 1.08);
+    -ms-transition: all 1500ms cubic-bezier(0.645, 0.045, 0.095, 1.08);
+    transition: all 1500ms cubic-bezier(0.645, 0.045, 0.095, 1.08);
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+    z-index: -1;
+    visibility: hidden;
+}
+.canvas-menu-overlay.open{
+	-webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    visibility: visible;
+}
+.off-canvas-menu{
+    padding: 0;
+    text-align: left;
+    -webkit-transition: all 1000ms cubic-bezier(0.645, 0.045, 0.095, 1.08);
+    -ms-transition: all 1000ms cubic-bezier(0.645, 0.045, 0.095, 1.08);
+    transition: all 1000ms cubic-bezier(0.645, 0.045, 0.095, 1.08);
+    z-index: 9;
+    z-index: 999999;
+    color: #ffffff;
+    position: fixed;
+    top: 0px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .54);
+  .slide-logo{
+	  img{
+          max-width: 400px;
+      }
+  }
+  .canvas-content-wrapper{
+      p{
+          color: #fff;
+      }
+      .contact-list{
+          li{
+              list-style: none;
+              margin-bottom: 15px;
+              display: flex;
+              align-items: center;
+              span.icon{
+                  color: $primary-color;
+                  font-size: 24px;
+                  margin-right: 15px;
+              }
+          }
+      }
+  }
+	.canvas-menu-logo{
+		max-width: 400px;
+        margin-bottom: 40px;
+		object-fit: contain;
+		object-position: center;
+  }
+  .canvas-menu-inner{
+	width: 450px; 
+    height: 100vh; 
+    display: flex; 
+    flex-direction: column; 
+    padding: 40px 40px; 
+    overflow-y: auto; 
+    position: relative;
+    background-color: #191919;
+  }
+	.top-menu-wrapper{
+		padding-top:6px;
+	}
+    .topdate{
+		margin-right:10px;
+		font-size: 14px;
+	}
+	.slideIn-menu-container{
+	    margin-top: 0px;
+		padding: 20px 25px;
+	    ul{
+	    	list-style: none;
+		    padding: 0;
+		    margin: 0;
+		    li{
+		    	display: block;
+			    text-align: left;
+				position: relative;
+				margin-bottom: 0px;
+			    span.gum-mm-switch{
+					position: absolute;
+					right: 10px;
+					top: 16px;
+          			font-size: 16px;
+					color: #e6e6e6;
+					cursor: pointer;
+					&:hover{
+						color: #fff;
+					}
+				}
+				a{
+					display: block;
+					padding: 14px 10px 14px 20px; 
+					text-transform: capitalize;
+					border-bottom: none;
+					font-size: 14px;
+					color:$secondary-color;
+					font-family: $primary-font;
+					text-align: left;
+					letter-spacing: 1px;
+					text-transform: uppercase;
+					font-weight: 600;
+					border-left: none;
+					position: relative;
+					&:hover{
+					color: $primary-color!important;	
+					
+					
+					}
+				}	
+			}
+			li.menu-item.current-menu-item{
+				a{
+				color: $primary-color;
+				
+				position: relative;
+				&:before{
+					content: '';
+					width: 8px;
+					height: 8px;
+					background: $primary-color;
+					position: absolute;
+					border-radius: 10px;
+					left: 4px;
+					top: 20px;
+					}
+				}
+				span.gum-mm-switch{	
+					color: $primary-color;
+				}
+			}
+	    }
+	}	
+		.slide-social-list{
+			margin-top: auto;
+			ul{
+				text-align: center;
+				padding-top: 0px;
+				padding-left: 0px;
+				margin-right: 0;
+				width: 100%;
+				padding-top: 20px;
+				margin-bottom: 0px;
+				li{
+					margin: 5px 0px;
+					display: inline-block;
+					a{
+					font-size: 18px;
+					width: 26px;
+					height: 26px;
+					margin: auto;
+					color: #939393;
+					&:hover{
+            color: $primary-color;
+            i{
+              color: $primary-color;
+            }
+					}
+					}
+				}
+			}
+		}
+	.dropdown-toggle::after{
+		position: absolute;
+		right: 12px;
+		top: 47%;
+	  }
+}
+.off-canvas-menu .slideIn-menu-container ul.slidein-menu li.menu-item{
+	ul.sub-menu{
+    width: 100%;
+		display: none;
+		li.menu-item{
+			a{
+				color: $secondary-color;
+				padding-left: 50px;
+        		font-weight: 400;
+        		&:before{
+         		visibility: hidden;
+        		}
+				&:hover{
+					color: $primary-color!important;
+					font-weight: 600;
+				}
+			}
+		}
+		li.current-menu-item{
+			a{
+				color: $secondary-color;
+				font-weight: 600;
+				position: relative;
+				padding-left: 66px;
+			}
+		}
+	}
+}
+.canvas-navigation-right{
+	right: -500px;
+}
+.slide-navigation-left{
+	left: -500px;
+}
+.canvas-navigation-right.active{
+  right: 0;
+}
+.slide-navigation-left.active{
+	left: 0px; 
+  }
+.off-canvas-menu.active #menu-close{
+  margin-left: 0px; 
+}
+.off-canvas-menu .canvas-menu-toggle{
+    cursor: pointer;
+    margin-left: 0px;
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    transition: all .2s ease-out 0s;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 26px;
+	&:hover{
+		color: $primary-color;
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
+	}
+}
+.canvas-menu-list{
+    ul.mobile-menu {
+        overflow-y: auto;
+        @media ( max-height: 540px ) {
+            max-height: 30vh;
+        }
+		// link styling for entire nav menu
+		a:link,
+		a:visited {
+			color: $white-color;
+			text-decoration: none;
+		}
+		// invert colors when menu is open
+		.active a:link,
+		.active a:visited {
+			color: $white-color;
+		}
+		
+		a:hover,
+		a:active,
+		a:focus {
+            color: $primary-color;
+		}
+		
+		> li {
+			min-height: 65px;
+			max-height: 100vh;
+			width: 100%;
+			border-bottom: 1px solid rgba($white-color,.3);
+			letter-spacing: 1px;
+            ul.submenu{
+                li{
+                    &::before{
+                        display: none;
+                    }
+                    a{
+                        font-size: 14px;
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                    }
+                }
+            }
+			cursor: pointer;
+			&:last-of-type{
+                border-bottom: none;
+            }
+			&:hover,
+			&:active,
+			&:focus,
+			&.active{
+				
+			
+				a:link,
+				a:visited {
+					color: $primary-color;
+				}
+			}
+			
+		    a {
+				display: block;
+				width: 100%;
+                height: 100%;
+				padding-left: 0;
+                font-size: 16px;
+                font-weight: 400;
+                transition: all .3s;
+			}
+            a.active{
+                color: $primary-color;
+            }
+            
+            > a {
+                padding-top: 20px;
+            }
+            ul.submenu.active{
+                li{
+                    a{
+                        color: $white-color;
+                        &:hover{
+                            color: $primary-color;
+                        }
+                    }
+                    a.active{
+                        color: $primary-color;
+                    }
+                }
+            }
+		}
+        
+	}
+
+	.parent-item {
+		position: relative;	
+		> a::after {
+			content: '\2b';
+			display: inline-block;
+			position: absolute;
+            top: 26px;
+            right: 5px;
+			transition: all .3s;
+            font: var(--fa-font-solid);
+            font-size: .8em;
+		}
+		&.active > a::after {
+            content: '\f068';
+			
+		}
+	}
+
+	.submenu {
+		background-color: transparent;
+		position: relative;
+		top: 12px;
+		left: 0;
+		max-height: 0;
+		opacity: 0;
+		visibility: hidden;
+		overflow: hidden;
+		border-bottom-right-radius: 10px;
+		transition:	opacity .3s ease-in-out, 
+        visibility .3s ease-in-out,
+        max-height .2s ease-in-out,
+        margin-bottom .3s ease-in-out;
+		&.active {
+			opacity: 1;
+			visibility: visible;
+			max-height: 100vh;
+			margin-bottom: 15px;
+			transition: max-height 1s;
+            li{
+                a{
+                    color: $white-color;
+                }
+            }
+		}
+		
+		li {
+			position: relative;
+			padding-left: 1em;
+			background-color: transparent;
+			
+			// add icon before all submenu items for better clarity
+			&::before {
+				content: '\f111';
+				display: block;
+				position: absolute;
+				top: 21px;
+                left: 2px;
+                color: rgba($white-color,.6);
+                font: var(--fa-font-solid);
+                font-size: 4px;
+			}
+            
+            a {
+                padding-top: 12px;
+                padding-bottom: 12px;
+            }
+		}
+	}
+}
+// ====================== Search Popup Style =======================
+.search-block {
+    opacity: 0;
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 15px;
+    &.visible{
+      opacity: 1;
+      height: auto;
+      z-index: 999;
+      display: block;
+      .search-inner {
+        opacity: 1;
+        ::placeholder{
+            color: rgba($white-color, .6);
+        }
+      }
+    }
+    .overlayer {
+      background-color: rgba(0, 0, 0, 0.7);
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    }
+    .search-inner {
+        background-color: rgba($primary-color, 1);
+        border-bottom: 1px solid $white-color;
+        opacity: 0;
+        padding: 5px 15px;
+        position: relative;
+        transition: all 0.4s ease 0s;
+        z-index: 10;
+        display: block;
+        max-width: 600px;
+        margin: auto;
+        top: 30%;
+        border-radius: $border-radius;
+        .search_input {
+            border: none;
+            background-color: transparent;
+            box-sizing: border-box;
+            display: inline-block;
+            height: 60px;
+            line-height: 2;
+            outline: medium none;
+            padding: 10px 10px 10px 43px;
+            width: 100%;
+            transition: all 0.45s ease 0s;
+            -webkit-appearance: none;
+            border-radius: 0;
+            color: $white-color;
+            font-size: 20px;
+          &.typing {
+            border: none;
+          }
+        }
+        .search-icon {
+          background-color: transparent;
+          border: medium none;
+          color: $white-color;
+          font-size: 20px;
+          left: 13px;
+          line-height: 1;
+          padding: 8px;
+          position: absolute;
+          top: 16px;
+        }
+      }
+  }
+// ====================== Section Heading Style ===============
+.heading-wrapper{
+    margin-bottom: 40px;
+}
+.heading-title{
+    font-weight: 500;
+    span{
+        font-weight: 600;
+    }
+}
+h3.heading-title{
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+.sub-heading-title{
+    font-size: 14px;
+    font-weight: 400;
+    font-family: $primary-font;
+    display: block;
+    color: $primary-color;
+    margin-bottom: 5px;
+}
+// ====================== Feature icon style ==================
+.feature-icon-style{
+    padding: 35px 30px;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    display: flex;
+    align-items: center;    
+    position: relative;
+    .icon{
+        font-size: 34px;
+        color: $primary-color;
+        margin-right: 20px;
+    }
+    h4{
+        margin-bottom: 10px;
+        &:hover{
+            color: $primary-color;
+        }
+    }
+    p{
+        font-size: 15px;
+        line-height: 24px;
+        margin: 0;
+    }
+    &:before{
+        font: var(--fa-font-solid);
+        color: $paragraph-color;
+        content: '\f178';
+        opacity: .2;
+        position: absolute;
+        font-size: 30px;
+        right: 15px;
+        bottom: 15px;
+        transform: rotate(45deg);
+    }
+}
+.feat-icon-style-two{
+       display: flex;
+       padding: 15px 0px;
+    .icon{
+        font-size: 30px;
+        color: $white-color;
+        background-color: $primary-color;
+        width: 70px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100px;
+        margin-right: 20px;
+    }
+    h4{
+        margin-bottom: 10px;
+        &:hover{
+            color: $primary-color;
+        }
+    }
+}
+.feat-icon-style-three{
+    padding: 35px 30px;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    height: 100%;
+    .icon{
+        font-size: 50px;
+        color: $primary-color;
+        margin-bottom: 10px;
+        display: block;
+    }
+    h4{
+        margin-bottom: 10px;
+        &:hover{
+            color: $primary-color;
+        }
+    }
+    p{
+        font-size: 16px;
+        line-height: 28px;
+        margin: 5px;
+    }
+}
+// ====================== Work Gallery Style ==================
+.gallery-nav{
+    list-style: none;
+   text-align: center;
+   margin-bottom: 35px;
+    margin-top: 30px;
+    li{
+        display: inline-block;
+        span{
+            font-size: 16px;
+            font-weight: 400;
+            display: block;
+            padding: 10px 24px;
+            border-radius: $border-radius;		
+            text-decoration: none;
+            color: $heading-color;
+            cursor: pointer;
+            transition: all ease-in-out 0.25s;
+
+        }
+        &:hover{
+            span{
+                color: $primary-color;
+            }
+        }
+       
+    }
+    li.active{
+        span{
+            color: $white-color;
+            background-color: $primary-color;
+        }
+    }
+}
+.portfolio-carousel{
+    .slick-slide{
+        padding: 0px 12px;
+    }
+}
+.portfolio-wrapper{  
+    .portfolio-inner {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: 450px;
+      border-radius: $border-radius;
+      img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+      }
+    }
+    
+    .details,
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      opacity: 0;
+    }
+    
+    .details {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+      transition: all 0.3s ease-in-out;
+      h3 {
+        color: $heading-color;
+        text-align: center;
+        margin: 0;
+        margin-bottom: 5px;
+      }
+      p {
+        color: $secondary-color;
+        letter-spacing: 2px;
+        text-align: center;
+        margin: 0;
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+    .overlay {
+      z-index: 1;
+      transition: all 0.6s ease-in-out;
+      margin: 10px;
+      
+      &::before{
+          opacity: .8;
+          background-color: $white-color;
+      }
+    }
+    .portfolio-inner:hover .details,
+    .portfolio-inner:hover .overlay {
+      opacity: 1;
+    } 
+}
+// ====================== Accordian Style =====================
+.accordion-button:focus{
+    border: none;
+    box-shadow: none;
+}
+.accordion-button{
+    &::after{
+        background-image: none;
+        content: '+';
+        font-weight: 400;
+        font-size: 22px;
+        position: absolute;
+        top: 18px;
+        left: 20px;
+        right: 18px;
+    }
+}
+.accordion-button:not(.collapsed)::after{
+    background-image: none;
+    transform: rotate(0deg);
+    content: '-';
+}
+.accordion{
+    .accordion-item{
+        background-color: $white-color;
+        border-color: $border-color;
+        border-radius: $border-radius;
+        margin-bottom: 5px;
+    }
+    .accordion-button{
+        
+        background-color: transparent;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.3;
+        border-bottom: 1px solid $border-color;
+        position: relative;
+        padding: 1.3rem 1.5rem;
+        padding-right: 40px;
+    }
+    .accordion-body{
+      
+        font-size: 16px;
+        line-height: 28px;
+        font-weight: 400;
+        color: $paragraph-color;
+    }
+    .accordion-button:not(.collapsed){
+        color: $white-color;
+        box-shadow: none;
+        background-color: $secondary-color;
+    }
+}
+.accordion.style-two{
+    .accordion-button{
+        background-color: $primary-color;
+        color: #fff;
+        font-size: 18px;
+        line-height: 24px;
+        border-radius: $border-radius;
+    }
+    .accordion-body{
+        font-size: 16px;
+    }
+}
+// ==================== Slick Slider Style ===================
+.slick-dots{
+    bottom: -60px;
+    li{
+        margin: 0 8px;
+        button{
+            width: 25px;
+            height: 6px;
+            &:before{
+                width: 25px;
+                height: 6px;
+                background-color: $primary-color;
+                font-size: 0;
+                border-radius: 30px;
+                opacity: 1;
+            }
+        }
+    }
+    
+    li.slick-active button:before{
+        background-color: $secondary-color;
+    }
+}
+.slick-next{
+    right: 0px;
+    &:before{
+        content: '\f178';
+        font: var(--fa-font-solid);
+        font-size: 20px;
+        color: $heading-color;
+        transition: all .3s;
+    }
+}
+.slick-prev {
+    left: 0px;
+    &:before{
+        content: '\f177';
+        font: var(--fa-font-solid);
+        font-size: 20px;
+        color: $heading-color;
+        transition: all .3s;
+    }
+}
+.slick-prev, .slick-next{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 2px solid $border-color;
+    z-index: 1;
+    transition: all .3s;
+    &:hover{
+        background-color: $secondary-color;
+        border-color: $secondary-color;
+        &:before{     
+            color: $white-color;
+        }
+    }
+    
+}
+.portfolio-carousel{
+    .slick-prev, .slick-next{
+        opacity: 0;
+    }
+}
+.portfolio-carousel.slick-slider{
+    &:hover{
+        .slick-prev {
+            left: 50px;
+        }
+        .slick-next {
+            right: 50px;
+        }
+        .slick-prev, .slick-next{
+            opacity: 1;
+        }
+    }
+}
+.pricing-slider,.blog-slider{
+    margin: 0px -12px;
+    .slick-slide{
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+// ====================== Testimonials Style ==================
+.testimonials-sec{
+    .slick-prev, .slick-next{
+        
+        top: 80%;
+    }
+    .slick-prev{
+        left: -73%;
+    }
+    .slick-next{
+        left: -64%;
+    }
+}
+.testimonial-wrapper{
+    .testi-inner{
+        position: relative; 
+        width: 100% ; 
+        padding: 40px 60px 40px 80px;
+        border-radius: $border-radius;
+        border: 1px solid $border-color;
+    }
+    .msg{
+        &:before{
+            content: '\f10d';
+            font-size: 50px;
+            font-weight: 600;
+            font-family: 'FontAwesome';
+            color: $primary-color;
+            opacity: .3;
+            position: absolute;
+            left: 30px;
+            top: 10px;
+        }
+    }
+  .avator-testi{
+    display: flex;
+    align-items: center;
+    }
+    .avator{
+        width: 70px;
+        height: 70px;
+        border-radius: 100px;
+        overflow: hidden;
+        margin-right: 15px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    p{
+        margin-bottom: 30px;
+        font-style: italic;
+    }
+    .user-info{
+        span.desti{
+            font-size: 14px;
+        }
+    }
+}
+// ====================== Pricing Plan Style ==================
+.price-wrapper{
+    .price-inner{
+        border-radius: $border-radius;
+        border: 1px solid $border-color;
+        padding: 50px;
+        overflow: hidden;
+    }
+    .price-header{
+        padding-bottom: 50px;
+        .price-title{
+            color: $heading-color;
+            font-size: 22px;
+            font-weight: 400;
+            margin-bottom: 12px;
+        }
+        .price-value{
+            color: $heading-color;
+            
+            h3{
+                color: $heading-color;
+                font-size: 55px;
+                font-weight: 400;
+            }
+            .p-month{
+                color: $paragraph-color;
+            }
+        }
+        .sub-title{
+            p{
+                color: $paragraph-color;
+                margin: 0;
+            }
+            
+        }
+    }
+    .price-body{
+        .list-style li{
+            margin-bottom: 15px;
+        }
+    }
+}
+// ====================== Client Style ========================
+.client-slider{
+    margin: 0px -40px;
+}
+.client-wrapper{
+    padding: 0px 40px;
+    text-align: center;
+    img{
+        filter: grayscale(100%);
+        transition: all .3s;
+        opacity: .7;
+        &:hover{
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+    }
+}
+// ====================== Team Style ==========================
+.team-wrapper{
+    .team-avator{
+        border-radius: $border-radius;
+        overflow: hidden;
+        position: relative;
+        height: 380px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+        ul.social-list{
+            position: absolute;
+            bottom: -50px;
+            width: 100%;
+            text-align: center;
+            transition: ease-in-out .3s;
+        }
+    }
+    .team-content{
+        position: absolute;
+        bottom: -100px;
+        width: 100%;
+        text-align: center;
+        transition: ease-in-out .3s;
+        padding: 0px 15px;
+        .team-content-inner{
+            padding: 15px 10px;
+            background-color: rgba($white-color, .9);
+            border-radius: $border-radius;
+        }
+    }
+    h3{
+        font-size: 20px;
+        transition: all .3s;
+        &:hover{
+            color: $primary-color;
+        }
+    }
+    &:hover{
+        ul.social-list{
+            bottom: 100px;
+        }
+        .team-content{
+            bottom: 10px;
+        }
+    }
+    
+    .desti{
+        font-size: 14px;
+        color: $paragraph-color;
+    }
+}
+// ====================== Counter Style =======================
+.counter-wrapper{
+    border-radius: $border-radius;
+}
+.count-up{
+    padding: 50px 30px;
+    border-radius: $border-radius;
+    text-align: center;
+    .count{
+        font-size: 40px;
+        font-weight: 500;
+        color: $white-color;
+    }
+    .icon-wrapper{
+            font-size: 40px;
+            color: $white-color;
+            margin-bottom: 15px;
+        }
+        p{
+            font-size: 17px;
+            margin-bottom: 0;
+            color:$white-color;
+            margin-top: -8px;
+        }
+}
+// ====================== Blog Style ==========================
+.blog-wrapper{
+    .blog-inner{
+        border-radius: $border-radius;
+        overflow: hidden;
+        border:1px solid $border-color;
+        background-color: $white-color;
+    }
+    .img-wrapper{
+        position: relative;
+        height: 280px;
+        width: 100%;
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1);
+            transition: all .4s;
+        }
+        
+    }
+    .blog-content{
+        padding: 35px 30px;
+        h4{
+            font-size: 24px;
+            line-height: 34px;
+            &:hover{
+                color: $primary-color;
+            }
+        }
+    }
+    &:hover{
+        .img-wrapper{
+            img{
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+.meta-date{
+    font-size: 15px;
+    font-weight: 400;
+    color: $paragraph-color;
+}
+.cat-list{
+    margin-left: 18px;
+    li{
+        list-style: none;
+        display: inline-block;
+        margin-right: 18px;
+        position: relative;
+        &::before{
+            content: '';
+            width: 4px;
+            height: 4px;
+            border-radius: 4px;
+            background-color: $primary-color;
+            position: absolute;
+            left: -10px;
+            top: 11px;
+        }
+        a{
+            font-size: 15px;
+            font-weight: 400;
+            color: $paragraph-color;
+        }
+    }
+}
+.full-post{
+    .blog-inner{
+        border-radius: 0;
+        overflow: hidden;
+        border:none;
+    }
+    .img-wrapper{
+        height: 500px;
+        border-radius: $border-radius;
+    }
+    .blog-content{
+        padding: 30px 0px;
+        h4{
+            font-size: 28px;
+            line-height: 42px;
+        }
+    }
+}
+.blog-summery{
+    h1,h2,h3,h4,h5,h6,ul,ol{
+        margin-bottom: 1.5rem;
+    }
+    h4{
+        font-size: 30px;
+        line-height: 46px;
+    }
+    .blockquote {
+        padding: 40px 30px 40px 75px;
+        border: 1px solid $border-color;
+        position: relative;
+        &:before{
+            content: '\f10d';
+            font: var(--fa-font-solid);
+            position: absolute;
+            left: 40px;
+            top: 22px;
+            color: $paragraph-color;
+            opacity: .2;
+            font-size: 50px;
+        }
+        p{
+            font-style: italic;
+            font-size: 18px;
+        }
+    }
+    .img-wrapper{
+        position: relative;
+        margin-bottom: 30px;
+    }
+    .share-wrapper {
+        margin-top: 50px;
+        padding-top: 30px;
+        border-top: 1px solid $border-color;
+        flex-wrap: wrap;
+    }
+}
+.comment-box{
+    padding-bottom: 30px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid $border-color;
+    .author-thumb{
+        width: 80px;
+        height: 80px;
+        border-radius: 100px;
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+        float: left;
+    }
+    .comment-info{
+        margin-left: 100px;
+        p{
+            margin-bottom: 10px;
+            font-size: 16px;
+            line-height: 28px;
+        }
+    }
+    h6{
+        color: $heading-color;
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 5px;
+        a{
+            color: inherit;
+            font-size: inherit;
+            font-weight: inherit;
+        }
+    }
+    .reply{
+        margin-top: 15px;
+        a{
+            color: $heading-color;
+            font-size: 15px;
+            font-weight: 400;
+            transition: all .3s;
+            &:hover{
+                color: $primary-color;
+            }
+        }
+    }
+    &:last-of-type{
+        border-bottom: none;
+    }
+}
+.comment-box.reply-box{
+    padding-left: 80px;
+}
+// ====================== Newsletter Style ==========================
+.newsletter-sec{
+    padding: 110px 0px;
+    position: relative;
+    overflow: hidden;
+    h2{
+        font-size: 48px;
+        font-weight: 600;
+        line-height: 60px;
+        color: $white-color;
+    }
+    .form-control{
+        padding: 1.675rem 1.5rem;
+    }
+}
+.newslet-form{
+    position: relative;
+    .btn{
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: $heading-color;
+        color: $white-color;
+        font-size: 22px;
+        &:hover{
+            background-color: $secondary-color;
+        }
+    }
+    .form-control:focus{
+        background-color: $white-color;
+    }
+}
+// ====================== CTA Style ===================
+.cta-bg{
+    background-image: url(../assets/images/footer-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.parallax-effect{
+    background-attachment: fixed;
+    position: relative;
+    z-index: 0;
+    &:before{
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0, .8);
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+    }
+}
+// ====================== Video Player Style ==================
+.video-wrapper{
+    .video-js{
+        width: 100%;
+        height: 600px;
+    }
+}
+.video-js .vjs-big-play-button .vjs-icon-placeholder:before{
+    width: 90px;
+    height: 90px;
+    background: $primary-color;
+    border-radius: 100px;
+    line-height: 91px;
+    color: #fff;
+    font-size: 55px;
+    transition: all .3s;
+    &:hover{
+        opacity: .7;
+    }
+}
+.vjs-poster{
+    background-size: cover;
+}
+.vjs-theme-fantasy .vjs-play-progress, .vjs-theme-fantasy .vjs-play-progress:before{
+    background-color: $primary-color;
+}
+// ======================= Sidebar Style ======================
+.sidebar{
+    .heading{
+        h2{
+            font-size: 22px;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+    }
+    .form-control{
+        background-color: $white-color;
+    }
+    .sp-line{
+        padding-bottom: 0px;
+        &:after{
+            left: 0;
+            right: initial;
+        }
+    }
+    ul.social-list{
+        li{
+            a{
+                color: $primary-color;
+            }
+        }
+    }
+    form{
+        .form-control{
+            border-radius: $border-radius !important;
+        }
+        .search-btn{
+            background: transparent;
+            border: none;
+            position: absolute;
+            right: 0;
+            font-size: 20px;
+            top: 8px;
+            right: 6px;
+            color: $paragraph-color;
+            transition: all .3s;
+            &:hover{
+                color: $primary-color;
+            }
+        }
+    }
+}
+.side-widget{
+    border-bottom: 1px solid $border-color;
+    margin: 0px 10px;
+    padding: 30px;
+    background-color: $gray-color-2;
+    border-radius: $border-radius;
+}
+.small-post-style{
+    display: flex;
+    margin-bottom: 20px;
+    &:last-of-type{
+        margin-bottom: 0;
+    }
+    figure{
+        width: 60px;
+        height: 60px;
+        margin-right: 10px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 3px;
+        }
+    }
+    h4{
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 3px;
+    }
+    ul.dcs-list{
+        li{
+            list-style: none;
+            font-size: 12px;
+            color: $paragraph-color;
+        }
+    }
+    &:hover{
+        h4{
+            color: $primary-color;
+        }
+    }
+}
+.tagcloud{
+    .tag-cloud-link{
+        background-color: $white-color;
+        color: $paragraph-color;
+        padding: 8px 15px;
+        display: inline-block;
+        border-radius: $border-radius;
+        margin-bottom: 8px;
+        margin-right: 5px;
+        transition: all .3s;
+        &:hover{
+            color: #fff;
+            background-color: $primary-color;
+        }
+    }
+}
+ul.side-cat-list{
+    li{
+        list-style: none;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        a{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            color: $paragraph-color;
+            &:hover{
+                color: $primary-color;
+            }
+        }
+        &:last-of-type{
+            border-bottom: none;
+        }
+    }
+}
+// ====================== Pagination Style =====================
+.pagination-wrapper{
+    border-top: 1px solid $border-color;
+}
+.page-item.active .page-link{
+    border-color: $secondary-color;
+    background-color: $secondary-color;
+}
+.page-link{
+    color: $secondary-color;
+    &:hover{
+        color: $secondary-color;
+        background-color: rgba($secondary-color,.2);
+    }
+}
+.page-link:focus{
+    box-shadow: none;
+    color: $secondary-color;
+    background-color: rgba($secondary-color,.2);
+}
+// ==================== Sign-in & Sign-up Style ===================
+
+.account-form-wrapper{
+    ::placeholder{
+        opacity: .4;
+    }
+}

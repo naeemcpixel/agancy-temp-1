@@ -1,0 +1,230 @@
+// ====================== Header Style =======================
+
+.nav-bg{
+  background-color: transparent;
+}
+ul.navbar-nav{
+  margin-left: 10rem;
+  li.nav-item{
+    a.nav-link{
+      color: $heading-color;
+      margin: 0px 30px;
+      padding: 40px 0px;
+      font-size: 16px;
+      font-weight: 400;
+      font-family: $primary-font;
+      position: relative;
+      &:before{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 24px;
+        width: 100%;
+        border-bottom: 2px solid $primary-color;
+        transform: scaleX(0);
+        transition: all .5s ease;
+      }
+    }
+    a.nav-link.active{
+      // color: $primary-color;
+      &:before{
+        transform: scaleX(1);
+      }
+      &::after{
+        border-color: $heading-color;
+      }
+    }
+    &:hover{
+      a.nav-link{
+        // color: $primary-color;
+        &:before{
+          transform: scaleX(1);
+        }
+        &:after{
+          border-color: $heading-color;
+        }
+      } 
+    }
+    &:last-of-type{
+      a.nav-link{
+        margin-right: 0;
+        padding-right: 0;
+      }
+    }
+  }
+}
+.header{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  .logo-wrapper{
+    padding: 12px 0px;
+  }
+  .canvas-menu-icon a,.search-icon-wrapper a{
+    color: $heading-color;
+    font-size: 18px;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: all .3s;
+    &:hover{
+      color: $primary-color;
+    }
+  }
+}
+.sticky-header{
+	  position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    -ms-animation-name: fadeInDown;
+    -moz-animation-name: fadeInDown;
+    -op-animation-name: fadeInDown;
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+    -ms-animation-duration: 500ms;
+    -moz-animation-duration: 500ms;
+    -op-animation-duration: 500ms;
+    -webkit-animation-duration: 500ms;
+    animation-duration: 500ms;
+    -ms-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    -op-animation-timing-function: linear;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -ms-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    -op-animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+	.nav-bg{
+		background-color: $white-color;
+		box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.1);
+	}
+}
+.sticky-header{
+  
+  .navbar{
+
+  }
+}
+//================= Dropdown Menu Style  =====================
+.navbar ul.navbar-nav .dropdown-toggle:after {
+  border-color: $heading-color;
+}
+.dropdown-toggle::after{
+  box-sizing: border-box;
+  height: 0.4em;
+  width: 0.4em;
+  border-style: solid;
+  border-width: 0px 1px 1px 0px;
+  transform: rotate(45deg);
+  transition: all .3s;
+  margin-left: 0.355em;
+}
+header ul.navbar-nav{
+  .dropdown-menu{
+      border-radius: 0;
+      box-shadow: 0 0px 10px rgba(37, 37, 37, 0.12);
+      -webkit-box-shadow: 0 0px 10px rgba(37, 37, 37, 0.12);
+      margin: 0;
+      background: #fff;
+      border: none;
+      transition: all .3s;
+      top: 115% !important;
+      border-radius: $border-radius;
+      z-index: 9;
+      a.dropdown-item{
+          padding: 0.30rem 1rem;
+          margin: 5px 0px;
+          position: relative;
+          transition: all .3s;
+          font-size: 15px;
+          color: $heading-color;
+          &:after{
+            border-color: $heading-color;
+          }
+          &:hover{
+              padding-left: 20px;
+              color: $primary-color;
+              &:after{
+                border-color: $primary-color;
+              }
+          }
+      }
+      a.dropdown-item.active{
+        color: $primary-color;
+        background-color: $gray-color-2;
+      }
+  }
+}
+.dropdown-item.active, .dropdown-item:active{
+    color: $primary-color;
+    background-color: $gray-color-2;
+}
+.dropdown-submenu {
+position: relative;
+}
+.dropdown-submenu a::after {
+transform: rotate(-45deg);
+position: absolute;
+right: 15px;
+top: .8em;
+}
+.dropdown-submenu .dropdown-menu {
+top: 0;
+left: 100%;
+}
+@media screen and (min-width: 992px) {
+header{
+  .dropdown-menu{
+    opacity: 0;
+    visibility: hidden;
+    display: block;
+    min-width: 12em;
+    border-radius: $border-radius;
+  }
+  .dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    top: 100% !important;
+    
+  }
+  .dropdown-menu{
+    .dropdown-submenu{
+      .dropdown-menu{
+        top: 0px !important;
+        opacity: 0;
+        visibility: hidden;
+        border: none;
+       
+          .dropdown-submenu{
+            .dropdown-menu{
+              top: 0px !important;
+              opacity: 0;
+              visibility: hidden;
+              // border: none;
+            }
+            &:hover{
+              .dropdown-menu{
+                opacity: 1;
+                visibility: visible;
+              }
+            }
+          }
+        
+      }
+      &:hover{
+        .dropdown-menu{
+          opacity: 1;
+          visibility: visible;
+        }
+        
+      }
+    }
+  }
+}
+}
+
+

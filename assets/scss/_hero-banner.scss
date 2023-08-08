@@ -1,0 +1,115 @@
+// ====================== Hero Banner Style =======================
+.hero-bg{
+    background-image: url(../assets/images/hero-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+.hero-sec{
+    h1{
+        span{
+            font-weight: 600;
+        }
+    }
+    p{
+       
+        font-size: 18px;
+        line-height: 36px;
+        margin-top: 20px;
+    }
+}
+.hero-slider-wrapper{
+    overflow: hidden;
+}
+.hero-text{
+    padding-top: 140px;
+}
+.hero-bg-shape-1{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+}
+.hero-content-wrapper{
+    position: relative;
+    
+}
+.hero-img-shape{
+    height: 590px;
+    width: 60%;
+    position: absolute;
+    right: -182px;
+    top: 38px;
+    border-radius: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transform: rotate(-15deg);
+}
+.number-wrapper{
+    display: flex;
+    align-items: center;
+    .icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width:44px;
+        height:44px;
+        border-radius: 50px;
+        background-color: $secondary-color;
+        font-size: 18px;
+        color: #fff;
+        box-shadow: $btn-shadow;
+        margin-right: 10px;
+    }
+    .n-text{
+        font-size: 14px;
+        font-weight: 400;
+        label{
+            display: block;
+            color: $heading-color;
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+}
+.hero-slider-wrapper{
+    .hero-content-wrapper{
+        min-height: 800px;
+        padding-bottom: 20px;
+    }
+}
+// ====================== Inner-Page Banner Style =======================
+.inner-banner{
+    height: 350px;
+    .breadcrumb{
+        margin-top: 1rem;
+        .breadcrumb-item{
+            a{
+                color: $heading-color;
+                font-size: 16px;
+            }   
+        }
+        .breadcrumb-item.active{
+            color: $primary-color;
+        }
+        span.icon{
+            margin-right: 5px;
+            font-size: 14px;
+        }
+    }
+    .inner-baner-text{
+        padding-top: 120px;
+        h1{
+            color: $heading-color;
+            font-size: 46px;
+            font-weight: 500;
+        }
+    }
+}
+.bg-inner-banner{
+    background-image: url(../assets/images/hero-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
